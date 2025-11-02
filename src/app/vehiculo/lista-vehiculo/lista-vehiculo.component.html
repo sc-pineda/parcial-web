@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <div class="mb-3">
+    <div class="brand-badge h4">TuSegundazo.com</div>
+  </div>
+
+  <hr class="my-3 border-2 border-dark" />
+
+  <div class="row justify-content-center mb-4">
+    <div class="col-12">
+      <img src="assets/banner.jpeg" alt="Banner" class="img-fluid w-100 rounded shadow-sm" />
+    </div>
+  </div>
+
+  <hr class="my-3 border-2 border-dark" />
+
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-bordered table-striped text-start align-middle shadow-sm">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Marca</th>
+            <th>Línea</th>
+            <th>Modelo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculos">
+            <td class="fw-bold">{{ vehiculo.id }}</td>
+            <td>{{ vehiculo.marca }}</td>
+            <td>{{ vehiculo.linea }}</td>
+            <td>{{ vehiculo.modelo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
