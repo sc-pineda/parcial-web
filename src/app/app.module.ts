@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { VehiculoModule } from './vehiculo/vehiculo.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    VehiculoModule
+    VehiculoModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

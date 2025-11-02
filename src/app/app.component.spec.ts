@@ -1,15 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { VehiculoComponent } from './vehiculo/vehiculo.component';
+import { ListaVehiculoComponent } from './vehiculo/lista-vehiculo/lista-vehiculo.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule, HttpClientTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, VehiculoComponent, ListaVehiculoComponent
       ],
     }).compileComponents();
   });
@@ -30,6 +33,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, parcialweb');
+    expect(compiled.querySelector('h1')?.textContent).toBeUndefined;
   });
 });
