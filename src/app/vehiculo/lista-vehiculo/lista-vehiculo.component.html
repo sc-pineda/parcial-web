@@ -35,4 +35,17 @@
       </table>
     </div>
   </div>
+  <div class="mb-3">
+    <p *ngFor="let marca of totalPorMarca | keyvalue" class="mb-0">
+      Total {{ marca.key }}: <span>{{ marca.value }}</span>
+    </p>
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-12 text-center text-muted small">
+      <p class="m-0">
+        {{"Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo"}}
+      </p>
+    </div>
+  </div>
 </div>
